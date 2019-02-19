@@ -1,0 +1,2 @@
+import urequests;import json;u="http://192.168.225.33:3000";p="http://192.168.225.33:3000/read";q=urequests.get(url=u);print(q.text);j={"date":"17.1.2019","time":"12:00","reading":"10000"};print(j);
+headers = {'content-type': 'application/json'}r=urequests.post(url=p,json=j,headers=headers);data=r.json();print(data);
